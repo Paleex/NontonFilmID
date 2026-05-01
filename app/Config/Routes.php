@@ -24,3 +24,8 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
 $routes->get('/dashboard', 'DashboardController::index');
 $routes->get('/dashboard-detail', 'DashboardController::detail');
+
+//admin login kalo gk perlu hapus aja
+$routes->get('/admin/login', 'Auth::index');
+$routes->post('/adminauth/login', 'Auth::login');
+$routes->get('/admin/logout', 'Auth::logout');
